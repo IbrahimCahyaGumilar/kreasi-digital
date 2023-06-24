@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Oswald:wght@200;300;400;500;600;700&display=swap');
+
+
+
+
+
+@layer utilities {
+    nav ul li a:hover,
+    nav ul li a.active {
+        color: black;
+    }
+
+    img {
+    object-fit: contain;
+    }
+
+    .logo {
+        font-family: 'Caveat', cursive;
+        font-family: 'Lato', sans-serif;
+        font-family: 'Oswald', sans-serif;
+    }
+    
+    .burger-mobile .close {
+        display: none;
+    }
+    
+    .burger-mobile.active .close {
+        display: block;
+    }
+    
+    .burger-mobile.active .menu {
+        display: none;
+    }
+    
+    
+    @media screen and (max-width:991px) {
+        ul {
+            @apply right-0;
+        }
+    
+        ul.active {
+            right: 0;
+        }
+    }
+}
+
